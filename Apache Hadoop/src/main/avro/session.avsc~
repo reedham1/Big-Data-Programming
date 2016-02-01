@@ -1,0 +1,66 @@
+{"namespace": "com.refactorlabs.cs378.sessions",
+ "type": "record",
+ "name": "Session",
+ "fields": [
+      {"name": "user_id", "type": "string"},
+      {"name": "events",
+       "type": {"type": "array",
+                "items": {"type": "record",
+                          "name": "Event",
+                          "fields": [
+                              {"name": "event_type",
+                               "type": {"type": "enum",
+                                        "name": "EventType",
+                                        "symbols": [ "CHANGE", "CLICK", "CONTACT_FORM_STATUS", "DISPLAY",
+                                                     "EDIT", "ILMR_STATUS", "ILMR_CPO", "PLAY", "PRINT",
+						     "SHOW", "SUBMIT", "VISIT" ]
+                                       }
+                               },
+                              {"name": "event_subtype",
+                               "type": ["null", {"type": "enum", "name": "EventSubtype",
+                                        "symbols": [ "CONTACT_FORM_TYPE", "ALTERNATIVE", "BANNER", "BUTTON", "DEALER_PHONE", 								"FEATURES_SECTION", "GET_DIRECTION", "VEHICLE_HISTORY", "ERROR", "SUCCESS",
+							"ALTERNATIVES", "ILMR_REPORT", "CONTACT_FORM", "LOAD_ERROR", "FINANCING",
+							"INSPECTION", "ROADSIDE", "SIRIUS", "WARRANTY", "SEE_MORE",
+							"ILMR_VIDEO", "ILMR", "BADGE_DETAIL", "PHOTO_MODAL", "BADGES",
+							"FEATURES", "MARKET_REPORT" ]
+                                       }]
+                              },
+                              {"name": "body_style", "type": "string", "default": ""},
+                              {"name": "cab_style", "type": "string", "default": "null"},
+                              {"name": "carfax_one_owner", "type": "string", "default": ""},
+                              {"name": "city", "type": "string", "default": "null"},
+                              {"name": "drive_type", "type": "string", "default": ""},
+                              {"name": "engine", "type": "string", "default": ""},
+                              {"name": "engine_displacement", "type": "string", "default": ""},
+                              {"name": "event_type", "type": "string", "default": ""},
+                              {"name": "exterior_color", "type": "string", "default": "null"},
+                              {"name": "features", "type": {"type": "array", "items": "string"}},
+                              {"name": "fuel", "type": "string", "default": ""},
+                              {"name": "initial_carfax_free_report", "type": "boolean", "default": "false"},
+                              {"name": "initial_cpo", "type": "boolean", "default": "false"},
+                              {"name": "interior_color", "type": "string", "default": ""},
+                              {"name": "make", "type": "string", "default": ""},
+                              {"name": "model", "type": "string", "default": ""},
+                              {"name": "mpg", "type": "string", "default": ""},
+                              {"name": "page", "type": "string", "default": "null"},
+                              {"name": "referring_domain", "type": "string", "default": "null"},
+                              {"name": "region", "type": "string", "default": "null"},
+                              {"name": "subtrim", "type": "string", "default": "null"},
+                              {"name": "transmission", "type": "string", "default": ""},
+                              {"name": "trim", "type": "string", "default": ""},
+                              {"name": "vehicle_condition", "type": "string", "default": ""},
+                              {"name": "year", "type": "string", "default": ""},
+                              {"name": "event_timestamp", "type": "string", "default": ""},
+                              {"name": "image_count", "type": "string", "default": ""},
+                              {"name": "initial_price", "type": "string", "default": ""},
+                              {"name": "mileage", "type": "string", "default": ""},
+                              {"name": "referrer", "type": "string", "default": ""},
+                              {"name": "user_id", "type": "string", "default": ""},
+                              {"name": "vin", "type": "string", "default": ""}
+                            ]
+                          }
+                }
+       }
+   ]
+ }
+
